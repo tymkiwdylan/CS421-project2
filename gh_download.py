@@ -39,6 +39,7 @@ def download_directory(repository, sha, server_path):
 
     os.makedirs(server_path)
     contents = repository.get_dir_contents(server_path, ref=sha)
+    print(contents)
 
     for content in contents:
         print ("Processing %s" % content.path)
